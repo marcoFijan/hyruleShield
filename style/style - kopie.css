@@ -1,0 +1,57 @@
+.shieldbody{
+	width: 1000px;
+	margin: auto;
+	border: 1px solid black;
+	margin: auto;
+}
+
+.shieldtopcontainer{
+	display: flex;
+	margin: auto;
+	position: relative;
+}
+
+.shieldbottomcontainer{
+	display: flex;
+	margin: auto;
+}
+
+.shieldtop1{
+	width: 0px;
+	height: 0px;
+	border-bottom: 250px solid grey;
+	border-left: 500px solid transparent;
+}
+
+.shieldtop2{
+	width: 0px;
+	height: 0px;
+	border-bottom: 250px solid grey;
+	border-right: 500px solid transparent;
+}
+
+
+.shieldbottom1{
+	width: 500px;
+	height: 1000px;
+	background-color: grey;
+	border-bottom-left-radius: 1000px; 
+}
+
+.shieldbottom2{
+	width: 500px;
+	height: 1000px;
+	background-color: grey;
+	border-bottom-right-radius: 1000px; 
+}
+
+.shieldbottompoint{
+	 width: 0; 
+	 height: 0;
+	 margin: auto;
+	 position: absolute;
+	 border-left: 250px solid transparent; 
+	 border-right: 250px solid transparent; 
+	 border-top: 100px solid grey;
+}
+

@@ -1,0 +1,865 @@
+:root {
+	/*COLORS*/
+	--bgcolor: #497755;
+	--innershieldcolor: #3f3a9b;
+	--shieldframecolor: linear-gradient(to left top, #565656, #8d8d8d);
+	--shieldframelightcolor: #8d8d8d;
+	--triforcecolor: #efd95d;
+	--triforceshadowcolor: #fdc65c;
+	--birdcolor: #c13936;
+	--framesshadowcolor: #424242;
+
+
+	/*SIZES*/
+	--shieldwidth: 100em;
+	--shieldheight: 95em;
+
+	--triforcewidth: 16em;
+	--triforceheight: 12em;
+	--triforceleft: 42.5em;
+	--triforcetop: 18em;
+
+	--triforcepartwidth: 4em;
+	--triforcepartheight: 6em;
+
+	--triforce1left: 6em;
+	--triforce2left: 2em;
+	--triforce3left: 10em;
+	--trifroce23bottom: 0em;
+
+	
+
+}
+
+body{
+	background-color: var(--bgcolor);
+}
+
+/*SHIELDBODY*/
+.shieldmain{
+	width: var(--shieldwidth);
+	margin: auto;
+	position:relative;
+}
+.shieldbody{
+	width: var(--shieldwidth);
+	height: var(--shieldheight);
+	border: 1px solid black;
+	background: var(--shieldframecolor);
+	-webkit-clip-path: polygon(50% 0, 82% 17%, 80% 45%, 70% 66%, 60% 72%, 50% 78%, 40% 72%, 30% 66%, 20% 45%, 18% 17%);
+	clip-path: polygon(50% 0, 82% 17%, 80% 45%, 70% 66%, 60% 72%, 50% 78%, 40% 72%, 30% 66%, 20% 45%, 18% 17%);
+	position: absolute;
+}
+
+
+
+
+
+
+
+/*TRIFORCE*/
+.triforce{
+	width: var(--triforcewidth);
+	height: var(--triforceheight);
+	left: var(--triforceleft);
+	top: var(--triforcetop);
+	position: absolute;
+}
+.tri1, .tri2, .tri3, .force1, .force2, .force3{
+	width: var(--triforcepartwidth);
+	height: var(--triforcepartheight);
+	background-color: var(--triforcecolor);
+	position: absolute;
+}
+
+.tri1, .tri2, .tri3{
+	-webkit-clip-path: polygon(0 0, 100% 100%, 0 100%, 0 0);
+	clip-path: polygon(0 0, 100% 100%, 0 100%, 0 0);
+	box-shadow:inset 0 -20px 10px orange, inset 10px 0 20px var(--triforceshadowcolor);
+	transform:skew(-33.7deg);
+}
+.force1, .force2, .force3{
+	-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 100% 0);
+	clip-path: polygon(100% 0, 100% 100%, 0 100%, 100% 0);
+	box-shadow:inset 0 -20px 10px orange, inset 0 18px 20px var(--triforceshadowcolor);
+	transform:skew(33.7deg);
+}
+.force1, .tri1{
+	left: var(--triforce1left);
+}
+.force2, .tri2{
+	left: var(--triforce2left);
+	bottom: var(--trifroce23bottom);
+}
+.force3, .tri3{
+	left: var(--triforce3left);
+	bottom: var(--trifroce23bottom);
+}
+.frame{
+	position:absolute;
+	width: var(--shieldwidth);
+}
+
+
+
+
+
+/*TRIFORCEFRAME*/
+.triforceframe{
+	position: absolute;
+	width: 99em;
+}
+
+.trifroceframemain{
+	position: absolute;
+	top: 17em;
+	left: 41em;
+}
+
+.trifroceframemaininner, .trifroceframemainouter1, .trifroceframemainouter2, .triforceframeup, .triforceframeupcircle, .triforceframeuplead,
+.triforceframeleft, .triforceframeleftcircle, .triforceframeleftlead, .triforceframeright, .triforceframerightcircle, .triforceframerightlead{
+	position: absolute;
+} 
+
+.trifroceframemaininner, .trifroceframemainouter1, .trifroceframemainouter2{
+	-webkit-clip-path: polygon(50% 0%, 0 75%, 100% 75%);
+	clip-path: polygon(50% 0%, 0 75%, 100% 75%);
+}
+
+.trifroceframemaininner{
+	top: 2em;
+	left: 1.5em;
+	width: 16em;
+	height: 14.7em;
+	background-color: var(--innershieldcolor);
+}
+
+.trifroceframemainouter1{
+	width: 19em;
+	height: 19em;
+	background-color: var(--shieldframecolor);
+}
+
+.trifroceframemainouter2{
+	left: -1em;
+	top: -0.8em;
+	width: 21em;
+	height: 21em;
+	background-color: var(--shieldframelightcolor);
+}
+
+.triforceframeup{
+	top: 10em;
+	left: 49.2em;
+}
+
+.triforceframeleft{
+	left: 37.5em;
+	top: 29.5em;
+}
+
+.triforceframeupcircle, .triforceframerightcircle, .triforceframeleftcircle{
+	width: 3em;
+	height: 3em;
+	border-radius: 100%;
+	transform: rotate(125deg);
+	background-color: var(--shieldframelightcolor);
+	box-shadow: inset 0 0.5em 0.7em var(--framesshadowcolor);
+}
+
+.triforceframeuplead, .triforceframerightlead, .triforceframeleftlead{
+	width: 0.6em;
+	height: 5em;
+	background-color: var(--shieldframecolor);
+	top: 0.6em;
+	border-left: 0.2em solid #8d8d8d;
+	border-right: 0.2em solid #8d8d8d;
+}
+
+.triforceframeupcircle{
+	left: -0.2em;
+}
+
+.triforceframeuplead{
+	height: 7em;
+	left: 0.8em;
+}
+
+.triforceframerightcircle, .triforceframeleftcircle{
+	top: 3em;
+}
+
+.triforceframeleftlead{
+	left: 2em;
+	top: 0.6em;
+	transform: rotate(-135deg);
+}
+
+.triforceframeright{
+	right: 38em;
+	top: 29.5em;
+}
+
+.triforceframerightlead{
+	top: 0.6em;
+	left: -0.5em;
+	transform: rotate(135deg);
+}
+
+
+
+
+
+/*INNERSHIELD*/
+.frameblockupleft, .frameblockupright, .frameblockcenter, .frameblockcenterleft, .frameblockcenterright, .frameblockdownleft, .frameblockdownright, .frameblockdown, .frameblockupleftextra, .frameblockuprightextra, .frameblockdownleftextra, .frameblockdownrightextra{
+	background-color: var(--innershieldcolor);
+	position: absolute;
+}
+.frameblockupleft, .frameblockupright{
+	width: 16em;
+	height: 40em;
+	top: 10em;
+}
+.frameblockupleft{
+	left: 36em;
+	transform: rotate(-27deg);
+}
+.frameblockupright{
+	right: 36em;
+	transform: rotate(27deg);
+}
+.frameblockcenter{
+	width: 28em;
+	height: 48em;
+	top: 12em;
+	left: 36.5em;
+}
+.frameblockcenterleft, .frameblockcenterright{
+	width: 40em;
+	height: 17em;
+	top: 21em;
+}
+.frameblockcenterleft{
+	left: 23em;
+	transform: rotate(-4.5deg);
+}
+.frameblockcenterright{
+	right: 23em;
+	transform: rotate(4.5deg);
+}
+.frameblockdownleft, .frameblockdownright{
+	width: 40em;
+	height: 16em;
+	top: 30em;
+}
+.frameblockdownleft{
+	left: 25.35em;
+	top: 29em;
+	transform: rotate(-27deg);
+	height: 17em;
+}
+.frameblockdownright{
+	right: 25.15em;
+	transform: rotate(25deg);
+}
+.frameblockdown{
+	width: 28em;
+	height: 33em;
+	top: 37em;
+	left: 36.5em;
+	-webkit-clip-path: polygon(34% 36%, 66% 36%, 100% 70%, 64% 88%, 55% 80%, 45% 80%, 35% 88%, 0 70%);
+	clip-path: polygon(34% 36%, 66% 36%, 100% 70%, 64% 88%, 55% 80%, 45% 80%, 35% 88%, 0 70%);
+}
+.frameblockupleftextra, .frameblockuprightextra{
+	width: 10em;
+	height: 5em;
+	top: 19em;
+}
+.frameblockupleftextra{
+	transform: rotate(-50deg);
+	left: 24em;
+}
+.frameblockuprightextra{
+	transform: rotate(50deg);
+	right: 24em;
+}
+.frameblockdownleftextra, .frameblockdownrightextra{
+	width: 10em;
+	height: 5em;
+	top: 51em;
+}
+.frameblockdownleftextra{
+	transform: rotate(48deg);
+	left: 32em;
+}
+.frameblockdownrightextra{
+	transform: rotate(-50deg);
+	right: 31em;
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+/*BIRD*/
+.bird,{
+	position: absolute;
+	width: 80em;
+}
+
+
+
+/*BIRDHEAD*/
+.birdhead{
+	position: absolute;
+	top: 35em;
+	left: 46.3em;
+	width: 8.4em;
+	height: 2em;
+}
+.birdheadmiddle, .birdheadbeak, .birdheadcenter, .birdheadcenter2, .birdheadsideright, .birdheadsideleft, .birdheadmiddleleft1, .birdheadmiddleleft2, .birdheadmiddleright1, .birdheadmiddleright2, .birdwingleftfeather1, .birdwingleftfeather2, .birdwingleftfeather3 , .birdwingleftfeather4, .birdwingrightfeather1, .birdwingrightfeather2, .birdwingrightfeather3 , .birdwingrightfeather4, .birdbodybottom, .birdbodycenter, .birdbodyside, .birdbodytop, .birdwingcenterred{
+	position: absolute;
+	background-color: var(--birdcolor);
+}
+.birdheadbeak{
+	left: 2.9em;
+	width: 2.7em;
+	height: 3.5em;
+	-webkit-clip-path: polygon(50% 0, 0 85%, 100% 85%);
+	clip-path: polygon(50% 0, 0 85%, 100% 85%);
+}
+.birdheadcenter{
+	left: 1.8em;
+	width: 4.8em;
+	height: 2.5em;
+	top: 1.7em;
+	border-radius: 65% 65% 0 0 / 100% 100% 0 0;
+}
+.birdheadcenter2{
+	left: -0.8em;
+	width: 10em;
+	height: 14em;
+	top: 4em;
+	-webkit-clip-path: polygon(70% 0, 30% 0, 50% 15%);
+	clip-path: polygon(70% 0, 30% 0, 50% 15%);
+}
+.birdheadsideright, .birdheadsideleft{
+	width: 3em;
+	height: 3em;
+	top: 3em;
+}
+.birdheadsideright{
+	right: 0em;
+	transform: rotate(-38deg);
+	-webkit-clip-path: polygon(70% 0, 30% 0, 30% 100%);
+	clip-path: polygon(70% 0, 30% 0, 30% 100%);
+}
+.birdheadsideleft{
+	left: 0em;
+	transform: rotate(38deg);
+	-webkit-clip-path: polygon(70% 0, 30% 0, 70% 100%);
+	clip-path: polygon(70% 0, 30% 0, 70% 100%);
+}
+.birdheadmiddle, .birdheadmiddleleft1, .birdheadmiddleleft2, .birdheadmiddleright1, .birdheadmiddleright2{
+	top: 2.8em;
+}
+.birdheadmiddleleft1, .birdheadmiddleright1{
+	width: 3em;
+	height: 3em;
+}
+.birdheadmiddleleft2, .birdheadmiddleright2{
+	width: 3em;
+	height: 3.5em;
+}
+.birdheadmiddleleft1{
+	left: 1.2em;
+	transform: rotate(15deg);
+	-webkit-clip-path: polygon(70% 0, 30% 0, 50% 100%);
+	clip-path: polygon(70% 0, 30% 0, 50% 100%);
+}
+.birdheadmiddleleft2{
+	left: 1.6em;
+	transform: rotate(5deg);
+	-webkit-clip-path: polygon(70% 0, 30% 0, 50% 100%);
+	clip-path: polygon(70% 0, 30% 0, 50% 100%);
+}
+.birdheadmiddleright1{
+	right: 1.2em;
+	transform: rotate(-15deg);
+	-webkit-clip-path: polygon(70% 0, 30% 0, 50% 100%);
+	clip-path: polygon(70% 0, 30% 0, 50% 100%);
+}
+.birdheadmiddleright2{
+	right: 1.6em;
+	transform: rotate(-5deg);
+	-webkit-clip-path: polygon(70% 0, 30% 0, 50% 100%);
+	clip-path: polygon(70% 0, 30% 0, 50% 100%);
+}
+.birdheadmiddle{
+	width: 6em;
+	height: 4.5em;
+	left: 1.2em;
+	-webkit-clip-path: polygon(70% 0, 30% 0, 50% 100%);
+	clip-path: polygon(70% 0, 30% 0, 50% 100%);
+}
+
+
+/*BIRDWINGS*/
+.birdwing{
+	position: absolute;
+	width: 60em;
+	top: 1.5em;
+}
+.birdwingcenterred{
+	width: 19em;
+	height: 12em;
+	border-radius: 5em;
+}
+.birdwingmiddle{
+	position: absolute;
+	top: 34em;
+	left: 41em;
+}
+.birdwingcenterblue1, .birdwingcenterblue2, .birdwingcenterblue3{
+	position: absolute;
+	background-color: var(--innershieldcolor);
+}
+.birdwingcenterblue1{
+	top: -1em;
+	left: 1.5em;
+	width: 16em;
+	height: 8em;
+	border-radius: 16em 16em 7em 7em;
+}
+.birdwingcenterblue2{
+	left: 1.5em;
+	top: 1.5em;
+	width: 16em;
+	height: 8em;
+	border-radius: 16em;
+}
+.birdwingcenterblue3{
+	left: 6em;
+	top: 5em;
+	width: 7em;
+	height: 8em;
+}
+.birdwindleftmain, .birdwindrightmain{
+	position: absolute;
+	top: 32em;
+}
+.birdwindleftmain{
+	left: 17em;
+}
+.birdwindrightmain{
+	right: 17em;
+}
+.birdwingleftfeather1, .birdwingleftfeather2, .birdwingleftfeather3 , .birdwingleftfeather4, .birdwingrightfeather1, .birdwingrightfeather2, .birdwingrightfeather3 , .birdwingrightfeather4{
+	border-radius: 1em  0 0 40em;
+}
+.birdwingleft1, .birdwingleft2, .birdwingleft3, .birdwingleft4, .birdwingright1, .birdwingright2, .birdwingright3, .birdwingright4{
+	position: absolute;
+	perspective: 50em;
+}
+
+
+/*BIRDWING LEFT*/
+.birdwingleft1{
+	top: -0.3em;
+	left: 0.3em;
+	transform: rotate(10deg);
+}
+.birdwingleftfeather1{
+	width: 40em;
+	height: 2.15em;
+	transform: rotateY(50deg);
+}
+.birdwingleft2{
+	top: 8.5em;
+	left: 5.5em;
+	transform: rotate(-3deg);
+}
+.birdwingleftfeather2{
+	width: 30em;
+	height: 2.15em;
+	transform: rotateY(50deg);
+}
+.birdwingleft3{
+	top: 15em;
+	left: 14em;
+	transform: rotate(-20deg);
+}
+.birdwingleftfeather3{
+	width: 18em;
+	height: 1.8em;
+	transform: rotateY(50deg);
+}
+.birdwingleft4{
+	top: 19em;
+	left: 22em;
+	transform: rotate(-50deg);
+}
+.birdwingleftfeather4{
+	width: 10em;
+	height: 1.5em;
+	transform: rotateY(50deg);
+}
+
+
+
+/*BIRDWING RIGHT*/
+.birdwingright1{
+	top: 6.5em;
+	right: 0em;
+	transform: rotate(-10deg);
+}
+.birdwingrightfeather1{
+	width: 40em;
+	height: 2em;
+	transform: rotateY(85deg);
+}
+.birdwingright2{
+	top: 6.8em;
+	right: -5em;
+	transform: rotate(3deg);
+}
+.birdwingrightfeather2{
+	width: 30em;
+	height: 2em;
+	transform: rotateY(95deg);
+}
+.birdwingright3{
+	top: 9em;
+	right: -10em;
+	transform: rotate(20deg);
+}
+.birdwingrightfeather3{
+	width: 18em;
+	height: 1.8em;
+	transform: rotateY(110deg);
+}
+.birdwingright4{
+	top: 20em;
+	right: -17em;
+	transform: rotate(230deg);
+}
+.birdwingrightfeather4{
+	width: 10em;
+	height: 1.5em;
+	transform: rotateY(50deg);
+}
+
+
+/*BIRDBODY*/
+.birdbody{
+	position: absolute;
+	left: 44.5em;
+	top: 42em;
+}
+.birdbodybottom{
+	top: 4em;
+	width: 12em;
+	height: 16em;
+	-webkit-clip-path: polygon(50% 0%, 55% 40%, 60% 52%, 55% 63%, 60% 74%, 50% 100%, 40% 75%, 45% 63%, 40% 52%, 45% 40%);
+	clip-path: polygon(50% 0%, 55% 40%, 60% 52%, 55% 63%, 60% 74%, 50% 100%, 40% 75%, 45% 63%, 40% 52%, 45% 40%);
+}
+.birdbodycenter{
+	left: 2em;
+	width: 8em;
+	height: 10em;
+	-webkit-clip-path: polygon(50% 43%, 100% 68%, 75% 74%, 64% 81%, 58% 88%, 50% 100%, 42% 88%, 36% 81%, 25% 74%, 0 68%);
+	clip-path: polygon(50% 43%, 100% 68%, 75% 74%, 64% 81%, 58% 88%, 50% 100%, 42% 88%, 36% 81%, 25% 74%, 0 68%);
+}
+.birdbodyside{
+	top: 2.8em;
+	width: 5em;
+	height: 5em;
+	border-radius: 100%;
+	left: 3.5em;
+}
+.birdbodytop{
+	left: 5em;
+	top: 1.5em; 
+	width: 2em;
+	height: 2.3em;
+	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+
+
+/*BIRDCLAW*/
+.claws{
+	position: absolute;
+	left: 41.5em;
+	top: 51em;
+}
+
+.clawleft, .clawright{
+	position: absolute;
+
+}
+
+.clawleftbase, .clawleftfeet, .clawleftnails1, .clawleftnails2, .clawrightbase, .clawrightfeet, .clawrightnails1, .clawrightnails2{
+	position: absolute;
+	background-color: var(--birdcolor);
+}
+
+.clawleftbase{
+	height: 5em;
+	width: 1.3em;
+	left: 4.8em;
+	border-radius: 2em;
+	transform: rotate(18deg);
+}
+
+.clawleftfeet{
+	height: 1em;
+	top: 4em;
+	width: 4em;
+	left: 2em;
+}
+
+.clawleftnails1{
+	height: 3em;
+	top: 4em;
+	width: 3em;
+	-webkit-clip-path: polygon(81% 0, 0 0, 100% 100%);
+	clip-path: polygon(81% 0, 0 0, 100% 100%);
+	border-radius: 1em 0 0 1em;
+}
+
+.clawleftnails2{
+	height: 2.3em;
+	top: 4em;
+	width: 2.3em;
+	left: 5.5em;
+	-webkit-clip-path: polygon(100% 0, 18% 0, 0 100%);
+	clip-path: polygon(100% 0, 18% 0, 0 100%);
+	border-radius: 0 1em 1em 0;
+}
+
+
+
+
+
+/*CLAW RIGHT*/
+.clawrightbase{
+	height: 5em;
+	width: 1.3em;
+	left: 12em;
+	border-radius: 2em;
+	transform: rotate(-18deg);
+}
+
+.clawrightfeet{
+	height: 1em;
+	top: 4em;
+	width: 4em;
+	left: 12em;
+}
+
+.clawrightnails1{
+	left: 15.2em;
+	height: 3em;
+	top: 4em;
+	width: 3em;
+	-webkit-clip-path: polygon(100% 0, 19% 0, 0% 100%);
+	clip-path: polygon(100% 0, 19% 0, 0% 100%);
+	border-radius: 0 1em 1em 0;
+}
+
+.clawrightnails2{
+	height: 2.3em;
+	top: 4em;
+	width: 2.3em;
+	left: 10.5em;
+	-webkit-clip-path: polygon(82% 0, 0 0, 100% 100%);
+	clip-path: polygon(82% 0, 0 0, 100% 100%);
+	border-radius: 1em 0 0 1em ;
+}
+
+
+
+
+
+
+
+/*FRAMES*/
+.metalframes{
+	position: absolute;
+	top: 15em;
+	left: 33em;
+	width: 34.5em;
+}
+
+.metalframeleft{
+	position: absolute;
+}
+
+.metalframeleft1, .metalframeleft2, .metalframeleft3, .metalframeright1, .metalframeright2, .metalframeright3{
+	position: absolute;
+	background-color: var(--shieldframelightcolor);
+}
+
+.metalframeleft1{
+	width: 10em;
+	height: 17em;
+	transform: rotate(20deg);
+	-webkit-clip-path: polygon(45% 30%, 73% 1%, 100% 14%, 96% 18%, 76% 14%, 65% 26%, 85% 43%, 56% 100%, 31% 82%, 61% 49%);
+	clip-path: polygon(45% 30%, 73% 1%, 100% 14%, 96% 18%, 76% 14%, 65% 26%, 85% 43%, 56% 100%, 31% 82%, 61% 49%);
+}
+
+.metalframeleft2{
+	top: 1.4em;
+	left: -3em;
+	width: 6em;
+	height: 15.6em;
+	transform: rotate(15deg);
+	-webkit-clip-path: polygon(44% 18%, 33% 43%, 33% 68%, 68% 68%, 100% 91%, 0 86%, 6% 38%, 28% 17%, 46% 4%, 65% 0);
+	clip-path: polygon(44% 18%, 33% 43%, 33% 68%, 68% 68%, 100% 91%, 0 86%, 6% 38%, 28% 17%, 46% 4%, 65% 0);	
+}
+
+.metalframeleft3{
+	top: 11.5em;
+	left: -3.8em;
+	width: 7.5em;
+	height: 4em;
+	transform: rotate(21deg);
+	-webkit-clip-path: polygon(0 0, 78% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(0 0, 78% 0, 100% 100%, 0% 100%);
+}
+
+.metalframeright{
+	position: absolute;
+	right: 0em;
+
+}
+
+.metalframeright1{
+	right: -1em;
+	width: 12em;
+	height: 17em;
+	transform: rotate(-13deg);
+	-webkit-clip-path: polygon(55% 30%, 27% 1%, 0% 14%, 4% 18%, 24% 14%, 35% 26%, 15% 43%, 54% 100%, 69% 82%, 39% 49%);
+	clip-path: polygon(55% 30%, 27% 1%, 0% 14%, 4% 18%, 24% 14%, 35% 26%, 15% 43%, 54% 100%, 69% 82%, 39% 49%);
+}
+
+.metalframeright2{
+	top: 1.4em;
+	right: -3em;
+	width: 6em;
+	height: 15.6em;
+	transform: rotate(-15deg);
+	-webkit-clip-path: polygon(56% 18%, 67% 43%, 67% 68%, 32% 68%, 0% 91%, 100% 86%, 94% 38%, 72% 17%, 54% 4%, 35% 0);
+	clip-path: polygon(56% 18%, 67% 43%, 67% 68%, 32% 68%, 0% 91%, 100% 86%, 94% 38%, 72% 17%, 54% 4%, 35% 0);	
+}
+.metalframeright3{
+	top: 11.5em;
+	right: -3.8em;
+	width: 7.5em;
+	height: 4em;
+	transform: rotate(-21deg);
+	-webkit-clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+
+.metalframecirclesides, .metalframecircleleft, .metalframecircleright, .metalframecirclebottom{
+	position: absolute;
+}
+
+.metalframecirclesides{
+	top: 1.9em;
+	width: 58em;
+}
+
+.metalframecircleleft, .metalframecircleright{
+	background-color: var(--shieldframelightcolor);
+	width: 2em;
+	height: 2em;
+	border-radius: 100%;
+	transform: rotate(125deg);
+	box-shadow: inset 0 0.5em 0.7em var(--framesshadowcolor);
+}
+
+.metalframecircleleft{
+	left: -12em;
+}
+
+.metalframecircleright{
+	right: 12em;
+}
+
+.metalframecirclebottom{
+	top: 51em;
+	left: 15.7em;
+	width: 3em;
+	border-radius: 100%;
+	height: 3em;
+	background-color: var(--shieldframelightcolor);
+	transform: rotate(-125deg);
+	box-shadow: inset 0 1em 1em var(--framesshadowcolor);
+}
+
+.metalframetriangles, .metalframetriangletop, .metalframetriangletopleft, .metalframetriangletopright, .metalframetriangleleft, .metalframetriangleright{
+	position: absolute;
+}
+
+.metalframetriangles{
+
+}
+
+.metalframetriangletop, .metalframetriangletopleft, .metalframetriangletopright, .metalframetriangleleft, .metalframetriangleright{
+	background-color: var(--framesshadowcolor);
+	box-shadow: inset 0 2em 2em -2em var(--shieldframelightcolor), inset 1em 0 2em 1em var(--shieldframelightcolor);
+	-webkit-clip-path: polygon(70% 0, 30% 0, 50% 100%);
+	clip-path: polygon(70% 0, 30% 0, 50% 100%);
+}
+
+.metalframetriangletop{
+	top: -12em;
+	left: 14.6em;
+	width: 5.5em;
+	height: 5.5em;
+}
+
+.metalframetriangletopleft{
+	top: -10em;
+	left: 11.6em;
+	width: 4em;
+	height: 4em;
+	transform: rotate(-20deg);
+}
+
+.metalframetriangletopright{
+	top: -10em;
+	left: 19em;
+	width: 4em;
+	height: 4em;
+	transform: rotate(20deg);
+}
+
+.metalframetriangleleft{
+	top: 42em;
+	left: -3em;
+	width: 3em;
+	height: 3em;
+	transform: rotate(-130deg);
+}
+
+.metalframetriangleright{
+	top: 42em;
+	left: 34em;
+	width: 3em;
+	height: 3em;
+	transform: rotate(130deg);
+}
